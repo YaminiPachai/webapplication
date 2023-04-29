@@ -1,0 +1,20 @@
+body  { 
+  background: url(capture.jpg) no-repeat center center fixed ; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+color:maroon;
+
+} 
+h2 { 
+font-size:30px;
+color:teal;
+}
+h3 { 
+font-size:30px;
+color:teal;
+}
+p {
+color:maroon;
+}

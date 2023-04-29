@@ -1,0 +1,77 @@
+<html>
+<title>
+Registration form
+</title>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css" >
+<script language="javascript" type="text/javascript">
+function nullfield()
+{
+	if(myform.user.value=="")
+	{
+		alert("Enter the user Name:");
+		myform.user.focus();
+	}
+	else if (myform.phone.value=="")
+	{
+		alert("Enter the Phone Number:");	
+		myform.phone.focus();
+	}
+	else if (myform.password.value=="")
+	{
+		alert("Enter the Password:");
+		myform.password.focus();
+		
+	}
+	else if (myform.rpassword.value=="")
+	{
+		alert("Renter the Password:");	
+		myform.rpassword.focus();	
+	}
+	else if(myform.password.value != myform.rpassword.value)
+	{
+		alert("Enter the Correct Password");
+	}
+	else if(myform.password.value == myform.rpassword.value)
+	{
+		alert("User Name Created");
+		window.open("home page.html" ,"_self")
+	}
+}
+</script>
+</head>
+
+<body>
+	<a href="login.html"> <img src="back.jpg" width=70 height=70> </a>
+	<form name="myform" >
+	<fieldset>
+	<legend>Registration</legend>
+	<table>
+
+	<tr><td>User Name:*</td>
+	<td><input type="text" name="user" placeholder="Enter user name">
+	</td></tr>
+	<tr><td>Phone No:*</td>
+	<td><input type="text" name="phone" pattern="[0-9]{10}" placeholder="Enter Phone no"></td>
+	<tr><td>Aadhaar No:</td>
+	<td><input type="text" name="aadhaar" pattern="[0-9]{12}" placeholder="Enter Aadhaar no" title="Enter your 16 digit Aadhar Number" maxlength="12" minlength="12">
+	</td></tr>
+	<tr><td>Email ID:</td>
+	<td><input type="email" name="email" placeholder="Enter Email ID" title="Enter valid Email Id">
+	</td></tr>
+	<tr><td>Address:</td>
+	<td><textarea rows=5 cols=15  name="address" title="Enter your Address"> </textarea>
+	</td></tr>
+	<tr><td>Password:*</td>
+	<td><input type="password" name="password" placeholder="Enter Password" title="Create Your Password " maxlength="8" minlength="6">
+	</td></tr>
+	<tr><td>Confirm Password:*</td>
+	<td><input type="password" name="rpassword" placeholder="Renter Password" title="Re-enter the Password Correctly" maxlength="8" minlength="6">
+	</td></tr>
+	<tr> <td> <input type="button"  value="Submit" onClick="nullfield()">
+	</td></tr>
+	</table>
+	</fieldset>	
+	</form>
+</body>
+</html>

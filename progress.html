@@ -1,0 +1,32 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css" >
+</head>
+<body>
+<progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
+<span id="status"></span>
+<h1 id="finalMessage"></h1>
+<p> Please Do not refresh this page Untill it  progress </p>
+<script>
+function progressBarSim(al) {
+  var bar = document.getElementById('progressBar');
+  var status = document.getElementById('status');
+  status.innerHTML = al+"%";
+  bar.value = al;
+  al++;
+	var sim = setTimeout("progressBarSim("+al+")",100);
+	if(al == 100){
+	  status.innerHTML = "100%";
+	  bar.value = 100;
+	  clearTimeout(sim);
+	  var finalMessage = document.getElementById('finalMessage');
+	  finalMessage.innerHTML = "Process is complete";
+		alert("Your payment is successful.You ticket will be generated shortly and it will be send to your registred phone number and mail id.");
+		window.open("home page.html" , "_self");
+	}
+}
+var amountLoaded = 0;
+progressBarSim(amountLoaded);
+</script>
+</body>
+</html>

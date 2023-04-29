@@ -1,0 +1,47 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css" > 
+<script>
+function myfunction()
+{
+if (myform.user.value=="")
+{
+alert("Enter the user name");
+myform.user.focus();
+}
+else if(myform.pass.value=="")
+{
+alert("Enter the password");
+myform.pass.focus();
+}
+else 
+{
+  window.open("progress.html","_self");
+}
+}
+</script>
+<style>
+a:visited{
+	color:black;
+	text-decoration:none;
+	}
+
+</style>
+<title> Net Banking</title>
+</head>
+<body>
+<a href="select payment.html"> <img src="back.jpg" width=70 height=70> </a>
+<form name="myform">
+<fieldset>
+<legend> Net Banking</legend>
+<table>
+<tr><td>User Name:</td>
+<td> <input type="text"  name="user" title="Enter the user name"> </td></tr>
+<tr> <td> Password:</td> 
+<td> <input type="password" name="pass" title="Enter the password" maxlength="8" minlength="6" > </td> </tr>
+<tr> <td> <input type="button"onClick="myfunction()" value="submit" > </td> </tr>
+<table>
+</fieldset>
+</form>
+</body>
+</html>

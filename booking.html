@@ -1,0 +1,96 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css" >
+<title> Booking </title>
+<script language="javascript" type="text/javascript">
+function book()
+{
+if(myform.uname.value=="")
+{
+alert("Enter User Name");
+myform.uname.focus();
+}
+
+else if(myform.cno.value=="")
+{
+alert("Enter Phone Number");
+myform.cno.focus();
+}
+else
+{
+window.open("seat2.html" ,"_self");
+}
+}
+function fair()
+{
+if(myform.seats.value ==1)
+{
+alert("500");
+}
+else if(myform.seats.value ==2)
+{
+alert("1000");
+}
+else if(myform.seats.value ==3)
+{
+alert("1500");
+}
+else if(myform.seats.value ==4)
+{
+alert("2000");
+}
+else if(myform.seats.value ==5)
+{
+alert("2500");
+}
+if(myform.seats.value ==6)
+{
+alert("3000");
+}
+if(myform.seats.value ==7)
+{
+alert("3500");
+}
+
+}
+</script>
+</head>
+<body>
+<a href="home page.html"> <img src="back.jpg" width=70 height=70> </a>
+<form name="myform">
+<fieldset>
+<legend> Form</legend>
+<table>
+<tr><td>Name:*</td>
+<td><input type="text" name="uname" ></td>
+</tr>
+<tr>
+<td>Contact Number:*</td>
+<td> <input type="text" pattern="[0-9]{10}" name="cno" > </td>
+</tr>
+<tr>
+<td>No.of Seats:*</td>
+<td> <input type="number" name="seats" max =7 min=1> </td>
+</tr>
+<tr>
+<td>Facilities:</td>
+<td> <input type="checkbox"  >Ac 
+<input type="checkbox" >Wi-Fi 
+<input type="checkbox"  >Sleeper 
+</td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td> <input type="Radio" name="gender"   >Female 
+<input type="Radio" name="gender" > Male 
+<input type="Radio" name="gender" > Both
+<input type="Radio" name="gender" > Transgender </td>
+</tr>
+<tr> <td> <input type="button" value="Check Fair" onClick="fair()"> </td>
+<td><input type="button" value="confirm booking" onClick="book()"> </td></tr>
+
+<table>
+</fieldset>
+</form>
+</body>
+</html>

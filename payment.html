@@ -1,0 +1,104 @@
+<html>
+<head>
+<title> Debit / credit  </title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<script language="javascript" type="text/javascript">
+function book()
+{
+if(myform.bank.value=="")
+{
+alert("Enter the Bank");
+myform.bank.focus();
+}
+
+else if(myform.card.value=="")
+{
+alert("Enter the name of card");
+myform.card.focus();
+}
+
+else if(myform.cardno.value=="")
+{
+alert("Enter the Card No");
+myform.cardno.focus();
+}
+
+else if(myform.cvv.value=="")
+{
+alert("Enter the cvv Code");
+myform.cvv.focus();
+}
+
+else if(myform.otp.value=="")
+{
+alert("Enter the OTP");
+myform.otp.focus();
+}
+else if(myform.captcha.value=="")
+{
+alert("Enter the Captcha Code");
+myform.captcha.focus();
+}
+else 
+{
+window.open("progress.html" , "_self");
+}
+}
+</script>
+</head>
+<body>
+<a href="select payment.html"> <img src="back.jpg" width=70 height=70> </a>
+<form name="myform">
+<fieldset>
+<legend>Debit / Credit Card payment</legend>
+<table>
+<tr><td>Select your bank:</td>
+<td>
+<select name="bank">
+<option> </option>
+<option> Indian Bank </option>
+<option> Indian Overseas Bank </option>
+<option> Canara Bank </option>
+<option> Axis Bank </option>
+<option> HDFC Bank  </option>
+<option> Tamil Mercantile Bank  </option>
+<option> Other </option>
+</select>
+</td>
+</tr>
+<tr>
+<td> Card name: </td>
+<td> 
+<select  name="card" >
+<option> </option>
+<option> Maestro </option>
+<option> Master </option>
+<option> Rupay </option>
+<option> Visa </option>
+</select>
+</td>
+</tr>
+<tr>
+<td> Card Number:</td>
+<td> <input type="text" maxlength=16 minlength=16  name="cardno" placeholder="xxxx xxxx xxxx xxxx"> </td>
+</tr>
+<tr>
+<td> CVV Code: </td>
+<td> <input type="text" maxlength=3  minlength=3 name="cvv" placeholder="***">
+</td>
+</tr>
+<tr>
+<td> OTP: </td>
+<td> <input type="password" name="otp" maxlength="6" minlength="6" > </td>
+</tr>
+<tr>
+<td> Promo Code: </td>
+<td> <input type="text" name="captcha" pattern ="[0-9]{4}"  > </td>
+</tr>
+<tr><td>   <input type="button" value="confirm booking" onClick="book()">  </td></tr>
+
+</table>
+</fieldset>
+</form>
+</body>
+</html>
